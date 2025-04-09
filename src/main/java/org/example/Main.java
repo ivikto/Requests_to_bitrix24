@@ -24,7 +24,7 @@ public class Main {
 
         log.info(REQUEST_BODY);
         LocalTime startTime = LocalTime.now();
-        String response = HTTP_REQUEST.run(URL, REQUEST_BODY, Metods.CRM_ITEM_UPDATE.getMethod());
+        String response = HTTP_REQUEST.run(URL, REQUEST_BODY, Metods.CRM_ITEM_GET.getMethod());
         JsonParse.toObject(response);
 
         log.info("Done for {} seconds", Duration.between(startTime, LocalTime.now()).toSeconds());
